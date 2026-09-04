@@ -1,0 +1,17 @@
+[2026-09-04T12:43:16.265Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.0f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 20948 --ipc-path Unity-Upm-20948 -l 2 --log-file 'C:\\Users\\ASUS TUF\\Documents\\GitHub\\Project\\My project (1)/Logs/upm.log'
+[2026-09-04T12:43:16.314Z][INFO] IPC server started (IPC path=Unity-Upm-20948).
+[2026-09-04T12:43:16.314Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-20948.
+[2026-09-04T12:43:20.902Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T12:43:21.122Z][INFO] project:list-packages --> 200 (220 ms)
+[2026-09-04T12:43:21.163Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-09-04T12:43:21.170Z][INFO] config:project:get-registries --> 200 (7 ms)
+[2026-09-04T12:43:21.188Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-09-04T12:43:21.323Z][INFO] project:list-packages --> 200 (135 ms)
+[2026-09-04T12:43:21.326Z][INFO] project:resolve-packages <-- Request received
+params: {}
+[2026-09-04T12:43:22.847Z][WARN] Requested version [2.0.0] for package [com.unity.settings-manager] overridden by minimum version [2.1.1].
+[2026-09-04T12:43:22.848Z][INFO] project:resolve-packages --> 200 (1522 ms)
+[2026-09-04T12:44:07.784Z][INFO] Shutting down UnityPackageManager.exe: parent process [20948] is no longer running.
