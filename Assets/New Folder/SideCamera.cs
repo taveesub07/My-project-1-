@@ -3,9 +3,6 @@ using UnityEngine;
 public class SideCamera : MonoBehaviour
 {
     public Transform player;
-
-    public float distance = -10f;
-    public float height = 3f;
     public float smoothSpeed = 5f;
 
     void LateUpdate()
@@ -17,7 +14,7 @@ public class SideCamera : MonoBehaviour
         Vector3 targetPosition = new Vector3(
             player.position.x,
             transform.position.y,
-            distance
+            transform.position.z
         );
 
         transform.position = Vector3.Lerp(

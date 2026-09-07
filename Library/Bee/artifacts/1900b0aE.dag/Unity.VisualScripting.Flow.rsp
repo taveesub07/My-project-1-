@@ -878,7 +878,7 @@
 /debug:portable
 /nologo
 /RuntimeMetadataVersion:v4.0.30319
--ruleset:"C:/Users/ASUS TUF/Documents/GitHub/Project/My project (1)/Library/ImmutablePackage.ruleset"
+-ruleset:"C:/Users/ASUS TUF/Documents/GitHub/My project (1)/Library/ImmutablePackage.ruleset"
 /nowarn:0169
 /nowarn:0649
 /nowarn:0282

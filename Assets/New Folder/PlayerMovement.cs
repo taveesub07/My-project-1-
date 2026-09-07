@@ -11,27 +11,38 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        // ห้ามหมุน
         rb.constraints =
-            RigidbodyConstraints.FreezePositionZ |
+            RigidbodyConstraints.FreezePositionY |
             RigidbodyConstraints.FreezeRotation;
     }
 
     void FixedUpdate()
     {
-        float input = 0f;
+        if (Keyboard.current == null)
+            return;
+
+        float x = 0f;
+        float z = 0f;
 
         if (Keyboard.current.aKey.isPressed)
-            input = -1f;
+            x = -1f;
 
         if (Keyboard.current.dKey.isPressed)
-            input = 1f;
+            x = 1f;
 
-        Vector3 velocity = rb.linearVelocity;
+        if (Keyboard.current.wKey.isPressed)
+            z = 1f;
 
-        velocity.x = input * moveSpeed;
-        velocity.z = 0f;
+        if (Keyboard.current.sKey.isPressed)
+            z = -1f;
 
-        rb.linearVelocity = velocity;
+        Vector3 movement = new Vector3(x, 0f, z);
+
+        if (movement.magnitude > 1f)
+            movement.Normalize();
+
+        rb.MovePosition(
+            rb.position + movement * moveSpeed * Time.fixedDeltaTime
+        );
     }
 }
